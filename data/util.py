@@ -1,4 +1,6 @@
 import os
+from PIL import Image
+import torchvision.transforms as transforms
 import torch
 import torchvision
 import random

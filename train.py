@@ -1,11 +1,13 @@
-import torch
-import data as Data
-import model as Model
+import os
 import argparse
 import logging
+
+import torch
+
+import data as Data
+import model as Model
 import core.logger as Logger
 import core.metrics as Metrics
-import os
 
 if __name__ == "__main__":
     # region: parse configs

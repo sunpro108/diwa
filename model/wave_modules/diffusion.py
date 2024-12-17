@@ -61,6 +61,7 @@ def default(val, d):
         return val
     return d() if isfunction(d) else d
 
+
 class DWSR(nn.Module):
     def __init__(self, in_channels, features, out_channels, kernel_size=3, padding=1, stride=1, groups=1, depth=10):
         super(DWSR, self).__init__()

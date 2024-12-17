@@ -34,6 +34,9 @@ def create_dataset(dataset_opt, phase):
                     data_len=dataset_opt['data_len'],
                     need_LR=(mode == 'LRHR')
                     )
+    elif mode == "HARM":
+        from data.iharmony4_dataset import Iharmony4Dataset as D
+        dataset = D(dataset_root=dataset_opt['dataroot'], is_for_train=phase)
     else:
         from data.LRHR_dataset import SRDataset as D
         dataset = D(data_folder=dataset_opt['dataroot'],
