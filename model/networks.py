@@ -94,6 +94,11 @@ def define_G(opt):
         from .wave_modules_abl_baseline import diffusion, unet
     elif model_opt['which_model_G'] == 'pred_only':
         from .wave_modules_abl_pred_only import diffusion, unet
+    elif model_opt['which_model_G'] == 'harm':
+        from .harm_modules import diffusion, unet
+    else:
+        raise NotImplementedError(
+            'Generator model name [{:s}] is not recognized'.format(model_opt['which_model_G']))
     if ('norm_groups' not in model_opt['unet']) or model_opt['unet']['norm_groups'] is None:
         model_opt['unet']['norm_groups']=32
     model = unet.UNet(

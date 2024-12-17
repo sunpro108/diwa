@@ -29,7 +29,7 @@
         }
     },
     "model": {
-        "which_model_G": "wave", // use the ddpm or sr3 network structure
+        "which_model_G": "harm", // use the ddpm or sr3 network structure
         "finetune_norm": false,
         "unet": {
             "in_channel": 24,

@@ -69,7 +69,7 @@ class Iharmony4Dataset(Dataset):
         #apply the same transform to composite and real images
         comp, real, mask = self.transform(comp, real, mask)
         
-        return {'comp': comp, 'mask': mask, 'real': real, 'img_path':self.image_paths[index]}
+        return {'SR': comp, 'mask': mask, 'HR': real, 'img_path':self.image_paths[index]}
 
     def __len__(self):
         """Return the total number of images."""
