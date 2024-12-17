@@ -18,7 +18,7 @@
             "name": "iharmony",
             "mode": "HARM", // which dataset to use
             "dataroot": "dataset/ihm_256",
-            "batch_size": 1,
+            "batch_size": 14,
             "num_workers": 8,
             "use_shuffle": true
         },
