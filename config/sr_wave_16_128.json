@@ -1,6 +1,7 @@
 {
     "name": "wave_16",
-    "phase": "train", // train or val
+    // train or val
+    "phase": "train", 
     "gpu_ids": [
         0
     ],

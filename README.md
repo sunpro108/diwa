@@ -75,9 +75,9 @@ python data/prepare_natural_tests.py
 ### Training/Resume Training
 
 ```python
-# Use sr.py and sample.py to train the super resolution task and unconditional generation task, respectively.
+# Use train.py and sample.py to train the super resolution task and unconditional generation task, respectively.
 # Edit json files to adjust network structure and hyperparameters
-python sr.py -p train -c config/sr_sr3.json
+python train.py -p train -c config/sr_sr3.json
 ```
 
 #### Configurations for Training
@@ -97,7 +97,7 @@ python sr.py -p train -c config/sr_sr3.json
 
 ```python
 # Edit json to add pretrain model path and run the evaluation 
-python sr.py -p val -c config/sr_sr3.json
+python train.py -p val -c config/sr_sr3.json
 
 # Quantitative evaluation alone using SSIM/PSNR/LPIPS metrics on given result root
 python eval.py -p [result root]

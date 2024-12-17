@@ -1,0 +1,1 @@
+python train.py -p train -c config/sr_wave_16_128.json
